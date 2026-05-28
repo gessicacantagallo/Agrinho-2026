@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Relógio Digital com Múltiplos Fusos Horários">
+    <title>Relógio Digital | Fusos Horários</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+    <div class="container">
+        <!-- HEADER -->
+        <header class="header">
+            <h1><i class="fas fa-globe"></i> Relógio Digital Global</h1>
+            <p>Visualize a hora em diferentes fusos horários do mundo</p>
+        </header>
+
+        <!-- CONTROLES -->
+        <div class="controls">
+            <div class="control-group">
+                <label for="timezone-select">Adicionar fuso horário:</label>
+                <select id="timezone-select">
+                    <option value="">Selecione um fuso...</option>
+                    <option value="UTC">UTC (Tempo Universal Coordenado)</option>
+                    <option value="America/New_York">New York (EST/EDT)</option>
+                    <option value="America/Los_Angeles">Los Angeles (PST/PDT)</option>
+                    <option value="America/Chicago">Chicago (CST/CDT)</option>
+                    <option value="America/Denver">Denver (MST/MDT)</option>
+                    <option value="America/Anchorage">Anchorage (AKST/AKDT)</option>
+                    <option value="Pacific/Honolulu">Honolulu (HST)</option>
+                    <option value="Europe/London">Londres (GMT/BST)</option>
+                    <option value="Europe/Paris">Paris (CET/CEST)</option>
+                    <option value="Europe/Berlin">Berlim (CET/CEST)</option>
+                    <option value="Europe/Moscow">Moscou (MSK)</option>
+                    <option value="Asia/Dubai">Dubai (GST)</option>
+                    <option value="Asia/Bangkok">Bangcoque (ICT)</option>
+                    <option value="Asia/Hong_Kong">Hong Kong (HKT)</option>
+                    <option value="Asia/Shanghai">Xangai (CST)</option>
+                    <option value="Asia/Tokyo">Tóquio (JST)</option>
+                    <option value="Asia/Seoul">Seul (KST)</option>
+                    <option value="Australia/Sydney">Sydney (AEDT/AEST)</option>
+                    <option value="Pacific/Auckland">Auckland (NZDT/NZST)</option>
+                    <option value="America/Sao_Paulo">São Paulo (BRT/BRST)</option>
+                    <option value="America/Buenos_Aires">Buenos Aires (ART)</option>
+                    <option value="America/Mexico_City">Cidade do México (CST/CDT)</option>
+                </select>
+                <button id="add-btn" class="btn btn-primary"><i class="fas fa-plus"></i> Adicionar</button>
+                <button id="reset-btn" class="btn btn-secondary"><i class="fas fa-redo"></i> Resetar</button>
+            </div>
+            <div class="format-toggle">
+                <input type="checkbox" id="format-24h" checked>
+                <label for="format-24h">Formato 24h</label>
+            </div>
+        </div>
+
+        <!-- CLOCKS CONTAINER -->
+        <div class="clocks-grid" id="clocks-container">
+            <!-- Relógios serão adicionados aqui dinamicamente -->
+        </div>
+
+        <!-- EMPTY STATE -->
+        <div class="empty-state" id="empty-state">
+            <i class="fas fa-clock"></i>
+            <h3>Nenhum fuso horário adicionado</h3>
+            <p>Selecione um fuso horário acima para começar</p>
+        </div>
+    </div>
+
+    <script src="js/script.js"></script>
+</body>
+</html>
